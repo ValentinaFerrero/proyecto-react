@@ -1,5 +1,13 @@
-.itemListConteiner{
-    background-color: rgb(0, 0, 0);
+.itemListContainer{
+    background-color: rgb(156, 152, 152);
+    height: 100%;
+    padding: 300px;
 }
 
-/*agregar mas contenido*/
+h1{
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+

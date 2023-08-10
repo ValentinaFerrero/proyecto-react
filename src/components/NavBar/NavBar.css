@@ -1,2 +1,11 @@
-/*agregar mas contenido*/
-/*agregar mas contenido css de card widget*/
+nav{
+    height: 65px;
+}
+.nav-link{
+    color: black;
+    font-size: 18px;
+}
+
+.navbar-brand{
+    font-size: 25px;
+}
