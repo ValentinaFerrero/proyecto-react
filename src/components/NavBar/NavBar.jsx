@@ -1,33 +1,39 @@
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import './NavBar.css';
 
-
-const NavBar = () => {
+const Navbar = () =>{
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a  className="navbar-brand" href="#">Biodiet Dietetica</a>
+<div className="container-fluid">
+<h1>
+    <Link to="/">
+    <img src="../img/elsembrador.jpg" alt="LogoElSembrador" className="nav-bar brand"/>
+    </Link>
+</h1>
+<div className="collapse navbar-collapse">
+<ul className="navbar-nav">
+    <li className="nav-item">
+        <NavLink to="/" className="nav-link me-auto ">Home</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/category/cereales" className="nav-link me-auto">Cereales</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/category/especias" className="nav-link me-auto">Especias</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/category/frutosSecos" className="nav-link me-auto">Frutos Secos</NavLink>
+    </li>
+</ul>
+</div>
+<div>
+    <CartWidget/>
+</div>
 
-                <ul className = "navbar-nav me-auto">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-aria-current="page" href="#"> Cereales</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#"> Suplementos</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#"> Frutos secos</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#"> Especias</a>
-                    </li>
-                </ul>
-            
-            {    }
-            <CartWidget/>
-            </div>
-        </nav>
+</div>
+</nav>
     )
+
 }
 
 export default NavBar;

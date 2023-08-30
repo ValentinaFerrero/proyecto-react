@@ -1,5 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListConteiner from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App (){
   return(
@@ -7,7 +9,13 @@ function App (){
     { }
     <NavBar/>
     { }
-    <ItemListConteiner greeting ="¡Proximamente!"/>
+    <ItemListContainer greeting ="¡Proximamente!"/>
+    <Routes>
+      <Route path= "/" element= {ItemListContainer} />
+      <Route path= "/category/:categoryId" element= {<ItemListContainer />} />
+      <Route path= "/item/:id" element= {<ItemDetailContainer />} />
+    </Routes>
+  
     </div>
   )
 }
